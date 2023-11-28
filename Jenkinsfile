@@ -14,38 +14,38 @@ pipeline {
             }
         }
 
-        stage('Build') {
-            steps {
-                // Build your Android application
-                sh './gradlew clean assembleDebug'
-            }
-        }
+        // stage('Build') {
+        //     steps {
+        //         // Build your Android application
+        //         sh './gradlew clean assembleDebug'
+        //     }
+        // }
 
-        stage('Test') {
-            steps {
-                // Run your tests, customize this depending on your testing framework
-                sh './gradlew testDebug'
-            }
-        }
+        // stage('Test') {
+        //     steps {
+        //         // Run your tests, customize this depending on your testing framework
+        //         sh './gradlew testDebug'
+        //     }
+        // }
 
-        stage('Deploy') {
-            steps {
-                // You can add deployment steps here if needed
-            }
-        }
+        // stage('Deploy') {
+        //     steps {
+        //         // You can add deployment steps here if needed
+        //     }
+        // }
     }
 
-    post {
-        always {
-            // Clean up or perform any final tasks here
-        }
+    // post {
+    //     always {
+    //         // Clean up or perform any final tasks here
+    //     }
 
-        success {
-            // Actions to be taken if the pipeline is successful
-        }
+    //     success {
+    //         // Actions to be taken if the pipeline is successful
+    //     }
 
-        failure {
-            // Actions to be taken if the pipeline fails
-        }
-    }
+    //     failure {
+    //         // Actions to be taken if the pipeline fails
+    //     }
+    // }
 }
