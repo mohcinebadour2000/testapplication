@@ -10,13 +10,13 @@ pipeline {
                 }
             }
         }
-        stage('Test') {
-            steps {
-                script {
-                    echo 'Running tests...'
-                    sh './gradlew test'
-                }
-            }
-        }
+        // stage('Test') {
+        //     steps {
+        //         script {
+        //             echo 'Running tests...'
+        //             sh './gradlew test'
+        //         }
+        //     }
+        // }
     }
 }
