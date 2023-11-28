@@ -1,10 +1,10 @@
 pipeline {
     agent any
 
-    environment {
-        ANDROID_HOME = 'C:\Program Files\Android\Android Studio\bin'
-        GRADLE_HOME = 'C:\Users\mohci\AndroidStudioProjects\MyApplication5\.gradle'
-    }
+    // environment {
+    //     ANDROID_HOME = 'C:\Program Files\Android\Android Studio\bin'
+    //     GRADLE_HOME = 'C:\Users\mohci\AndroidStudioProjects\MyApplication5\.gradle'
+    // }
 
     stages {
         stage('Checkout') {
