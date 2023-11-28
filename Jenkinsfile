@@ -2,15 +2,15 @@ pipeline {
     agent any
     
     environment {
-        ANDROID_HOME = 'C:\\Users\\mohci\\AppData\\Local\\Android\\Sdk'
-        PATH = "${env.PATH};${ANDROID_HOME}/tools;${ANDROID_HOME}/platform-tools"
+        // No need to explicitly set ANDROID_HOME, Jenkins will set it based on the configured SDK
+        PATH = "${env.PATH}:${ANDROID_HOME}/tools:${ANDROID_HOME}/platform-tools"
     }
 
     stages {
         stage('Checkout') {
             steps {
-                // Check out your code from version control
-                checkout scm
+                // Check out your code from GitHub
+                git 'https://github.com/mohcinebadour2000/testapplication.git'
             }
         }
 
@@ -23,7 +23,7 @@ pipeline {
 
         stage('Test') {
             steps {
-                // Run your tests, you might need to customize this depending on your testing framework
+                // Run your tests, customize this depending on your testing framework
                 sh './gradlew testDebug'
             }
         }
